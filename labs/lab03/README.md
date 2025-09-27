@@ -98,14 +98,3 @@
 ![4](4.%20System%20job.png)
 
 ---
-
-## Cấu trúc repo
-
-├── 1.1. Khách hàng đăng nhập bằng tài khoản Zalo + Tìm kiếm & xem thông tin.png
-├── 1.2. KH đặt bàn + đặt cọc.png
-├── 1.3. KH check-in.png
-├── 1.4. KH hủy & hoàn tiền.png
-├── 2. Staff_Manager.png
-├── 3. Admin.png
-├── 4. System job.png
-└── README.md
