@@ -19,10 +19,10 @@
 (Sơ đồ use case có thể chèn hình ảnh vào đây)
 
 📐 Thiết kế hệ thống
-- Use Case Diagram: ./labs/lab02/Admin.jpg
-- Class Diagram: (link: .png)
-- Sequence Diagram: (link: .png)
-- ERD (Entity Relationship Diagram): (link: .png)
+- Use Case Diagram: lab02
+- Class Diagram: lab06
+- Sequence Diagram: lab03
+- ERD (Entity Relationship Diagram): lab05
 
 💻 Công nghệ sử dụng
 - Ngôn ngữ: HTML/CSS, Javascript/, 
