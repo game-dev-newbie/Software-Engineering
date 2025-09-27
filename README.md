@@ -19,7 +19,7 @@
 (Sơ đồ use case có thể chèn hình ảnh vào đây)
 
 📐 Thiết kế hệ thống
-- Use Case Diagram: (./lab02/Admin.jpg)
+- Use Case Diagram: (labs/lab02/Admin.jpg)
 - Class Diagram: (link: .png)
 - Sequence Diagram: (link: .png)
 - ERD (Entity Relationship Diagram): (link: .png)
