@@ -19,15 +19,16 @@
 (Sơ đồ use case có thể chèn hình ảnh vào đây)
 
 📐 Thiết kế hệ thống
-- Use Case Diagram: (link: .png)
+- Use Case Diagram: (./lab02/Admin.jpg)
 - Class Diagram: (link: .png)
 - Sequence Diagram: (link: .png)
 - ERD (Entity Relationship Diagram): (link: .png)
 
 💻 Công nghệ sử dụng
-- Ngôn ngữ và công cụ: HTML/CSS, Javascript/Nodejs + ExpressJs, Postman
+- Ngôn ngữ: HTML/CSS, Javascript/, 
+- Công cụ: Postman test Restful API, Nodejs + ExpressJs for server, Jest + Supertest for Unit test, Selenium for Integration test
 - IDE: Visual Studio Code
-- RDBMS: MySQL / PostgreSQL, MongoDB
+- RDBMS: MySQL(Dbeaver)
 - Quản lý phiên bản: Git + GitHub
 - Mô hình phát triển: Agile – Scrum
 
