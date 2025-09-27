@@ -1,1 +1,1 @@
-#Integration test with login-form
+#Integration test with login-form - Selenium

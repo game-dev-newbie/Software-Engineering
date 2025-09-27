@@ -9,7 +9,7 @@ I am currently a Software Engineering student at Post and telecommunications ins
 
 🔹 Skills:
 - Programming languages: HTML, CSS, JavaScript, C#, SQL, 
-- Tools: Git/Github, Visual Studio Code, Jira, MySQL Workbench, Nodejs  
+- Tools: Git/Github, Visual Studio Code, Jira, MySQL Workbench, Nodejs, Unity  
 - Development process: Agile - Scrum, Waterfall  
 
 🔹 Goals:
