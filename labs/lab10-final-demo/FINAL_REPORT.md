@@ -61,7 +61,7 @@ Mini App Đặt Bàn Nhà Hàng là một ứng dụng học tập (lab) nhằm 
 - Flow Staff / Manager xác nhận / hủy  
 - Flow System job gửi nhắc lịch, đồng bộ thanh toán  
 
-(Ảnh bạn đã gửi trong lab có chứa các sequence diagram — bạn nên chèn vào report nếu có ảnh PNG)
+../lab03/
 
 ### 2.3 ERD / Database & script SQL
 
