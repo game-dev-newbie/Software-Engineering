@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Restaurant Booking Login</title>
+  <link rel="stylesheet" href="main.css">
+ </head>
+<body>
+  <div class="overlay"></div>
+  <main class="card">
+    <div class="logo"><img src="https://img.freepik.com/vector-cao-cap/thiet-ke-logo-nha-hang_166235-97.jpg" alt="logo" width="120px" height="120px"></div>
+    <h1>Nhà hàng</h1>
+    <p class="lead">Đăng nhập để đặt bàn nhanh chóng</p>
+
+    <form id="loginForm" novalidate>
+      <div>
+        <label for="username">Tên đăng nhập</label>
+        <input id="username" name="username" class="input" type="text" placeholder="Email hoặc SĐT" />
+      </div>
+
+      <div style="margin-top:14px;">
+        <label for="password">Mật khẩu</label>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <input id="password" name="password" class="input" type="password" placeholder="Mật khẩu" />
+          <button type="button" id="togglePass" class="toggle-pass">Hiện</button>
+        </div>
+      </div>
+
+      <div class="checkbox">
+        <input id="remember" type="checkbox" />
+        <label for="remember">Ghi nhớ tôi</label>
+      </div>
+      
+      <div id="errorBox" class="error" style="display:none"></div>
+
+      <div class="actions">
+        <button type="button" id="cancelBtn" class="btn ghost">Hủy</button>
+        <button type="submit" id="loginBtn" class="btn primary">Đăng nhập</button>
+      </div>
+    </form>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
