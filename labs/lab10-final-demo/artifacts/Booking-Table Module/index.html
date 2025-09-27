@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt bàn nhà hàng</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      width: 380px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    .btn-submit {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #0056b3;
+    }
+
+    .message {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .message.success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .message.error {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Đặt bàn</h2>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="restaurant">Tên nhà hàng</label>
+        <select id="restaurant" required>
+          <option value="">-- Chọn nhà hàng --</option>
+          <option value="Nhà hàng A">Nhà hàng A</option>
+          <option value="Nhà hàng B">Nhà hàng B</option>
+          <option value="Nhà hàng C">Nhà hàng C</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="customer">Tên người đặt</label>
+        <input type="text" id="customer" placeholder="Nhập tên của bạn" required>
+      </div>
+
+      <div class="form-group">
+        <label for="datetime">Ngày giờ check-in</label>
+        <input type="datetime-local" id="datetime" required>
+      </div>
+
+      <div class="form-group">
+        <label for="guests">Số lượng khách</label>
+        <input type="number" id="guests" min="1" max="20" required>
+      </div>
+
+      <button type="submit" class="btn-submit">Xác nhận</button>
+    </form>
+
+    <div id="responseMessage" class="message" style="display:none;"></div>
+  </div>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const bookingData = {
+        restaurant: document.getElementById("restaurant").value,
+        customer: document.getElementById("customer").value,
+        datetime: document.getElementById("datetime").value,
+        guests: document.getElementById("guests").value
+      };
+
+      const responseDiv = document.getElementById("responseMessage");
+
+      try {
+        const res = await fetch("http://localhost:3000/bookings", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(bookingData)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          responseDiv.textContent = result.message;
+          responseDiv.className = "message success";
+        } else {
+          responseDiv.textContent = result.message || "Có lỗi xảy ra!";
+          responseDiv.className = "message error";
+        }
+
+        responseDiv.style.display = "block";
+      } catch (err) {
+        responseDiv.textContent = "Không thể kết nối server!";
+        responseDiv.className = "message error";
+        responseDiv.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
