@@ -2,17 +2,12 @@
 1. Unit Test Cases
 ✅ Thành công
 
-TC-U1: Thêm đặt bàn hợp lệ
-
-Input:
-
-restaurant = "Nhà hàng A"
-
-customer = "Nguyễn Văn B"
-
-datetime = "2025-10-01 19:00:00"
-
-guests = 4
+- TC-U1: Thêm đặt bàn hợp lệ
+- - Input:
+  - restaurant = "Nhà hàng A"
+  - customer = "Nguyễn Văn B"
+  - datetime = "2025-10-01 19:00:00"
+  - guests = 4
 
 Expected: Hàm addBooking trả về { success: true, message: "Booking added successfully" }.
 
