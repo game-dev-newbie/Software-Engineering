@@ -31,6 +31,5 @@
 - Mô hình phát triển: Agile – Scrum
 
 🚀 Cài đặt & chạy thử
-- Clone repo: git clone (https://github.com/b3hoangngochoa-bot/Software-Engineering-Gr1.git)
-  cd Software-Engineering-Gr1
+- Clone repo: git clone https://github.com/game-dev-newbie/Software-Engineering.git
 
