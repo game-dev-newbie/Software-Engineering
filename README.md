@@ -5,10 +5,7 @@
 - Dự án này được phát triển trong môn Nhập môn Công nghệ Phần mềm.
 - Mục tiêu là áp dụng quy trình phát triển phần mềm, từ phân tích yêu cầu, thiết kế, lập trình, kiểm thử và triển khai.
 
-👥 Thành viên nhóm
-- Bùi Thành Đạt - Leader, Developer Backend, Tester
-- Hoàng Ngọc Hòa - Developer Frontend, Tester
-- Lâm Quốc Toàn - UI/UX designer, Tester
+👥 Link giới thiệu: https://game-dev-newbie.github.io/Software-Engineering/
 
 🎯 Use Case chính
 - Tìm kiếm nhà hàng
