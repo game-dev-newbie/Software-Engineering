@@ -5,7 +5,8 @@
 - Dự án này được phát triển trong môn Nhập môn Công nghệ Phần mềm.
 - Mục tiêu là áp dụng quy trình phát triển phần mềm, từ phân tích yêu cầu, thiết kế, lập trình, kiểm thử và triển khai.
 
-👥 Link giới thiệu: https://game-dev-newbie.github.io/Software-Engineering/
+👥 Link giới thiệu:
+- [Bùi Thành Đạt](https://game-dev-newbie.github.io/Software-Engineering/): Leader, Backend dev, Tester
 
 🎯 Use Case chính
 - Tìm kiếm nhà hàng
