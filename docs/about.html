@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới Thiệu - Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #e0e0e0;
+        background-color: #0a0a0a;
+      }
+
+      /* Header & Navigation */
+      header {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: white;
+        padding: 1rem 0;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #2a2a3e;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: #b0b0b0;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #667eea;
+      }
+
+      nav a.active {
+        color: #667eea;
+        border-bottom: 2px solid #667eea;
+        padding-bottom: 4px;
+      }
+
+      /* Main Content */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        min-height: calc(100vh - 200px);
+      }
+
+      /* Content Sections */
+      .content-section {
+        margin-bottom: 3rem;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 2.5rem;
+        border-radius: 15px;
+        border: 1px solid #2a2a3e;
+      }
+
+      .content-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #667eea;
+        border-left: 4px solid #667eea;
+        padding-left: 1rem;
+      }
+
+      .content-section p {
+        margin-bottom: 1rem;
+        color: #b0b0b0;
+        line-height: 1.8;
+      }
+
+      /* Grid Layout */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .card {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid #2a2a3e;
+        transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        text-align: center;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        border-color: #667eea;
+      }
+
+      .card h3 {
+        color: #667eea;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .card h4 {
+        color: #764ba2;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+
+      .card p {
+        color: #b0b0b0;
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #b0b0b0;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+        border-top: 1px solid #2a2a3e;
+      }
+
+      footer p {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+        }
+
+        .content-section {
+          padding: 1.5rem;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Logo/Tên Website</div>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="about.html" class="active">Giới Thiệu</a></li>
+          <li><a href="project.html">Dự Án</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content-section">
+        <h2>Về Chúng Tôi</h2>
+        <p>
+          Chúng tôi là một nhóm sinh viên đam mê công nghệ và sáng tạo
+        </p>
+        <p>
+         Chung tôi đang thực hiện một mini-app trên nền tảng zalo
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Đội Ngũ Của Chúng Tôi</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Bùi Thành Đạt</h3>
+            <h4>Leader</h4>
+            <p>
+              Một sinh viên đầy sự đam mê công nghệ
+            </p>
+          </div>
+          <div class="card">
+            <h3>Hoàng Ngọc Hòa</h3>
+            <h4>Thành viên</h4>
+            <p>
+              Một sinh viên đầy niềm năng
+            </p>
+          </div>
+          <div class="card">
+            <h3>Lâm Quốc Toàn</h3>
+            <h4>Thành viên</h4>
+            <p>
+             Một sinh viên đầy triển vọng
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Tên Website. All rights reserved.</p>
+      <p>Địa chỉ | Email | Số điện thoại</p>
+    </footer>
+  </body>
+</html>
