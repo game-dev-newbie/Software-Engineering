@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dự Án - Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #e0e0e0;
+        background-color: #0a0a0a;
+      }
+
+      /* Header & Navigation */
+      header {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: white;
+        padding: 1rem 0;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #2a2a3e;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: #b0b0b0;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #667eea;
+      }
+
+      nav a.active {
+        color: #667eea;
+        border-bottom: 2px solid #667eea;
+        padding-bottom: 4px;
+      }
+
+      /* Main Content */
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        min-height: calc(100vh - 200px);
+      }
+
+      /* Page Header */
+      .page-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 2.5rem;
+        border-radius: 15px;
+        border: 1px solid #2a2a3e;
+      }
+
+      .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .page-header p {
+        color: #b0b0b0;
+        font-size: 1.1rem;
+      }
+
+      /* Grid Layout */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 1px solid #2a2a3e;
+        transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        border-color: #667eea;
+      }
+
+      .card-header {
+        margin-bottom: 1rem;
+      }
+
+      .card h3 {
+        color: #667eea;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .card .tag {
+        display: inline-block;
+        background: rgba(102, 126, 234, 0.2);
+        color: #667eea;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        color: #b0b0b0;
+        flex-grow: 1;
+        margin-bottom: 1rem;
+      }
+
+      .card-footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: auto;
+      }
+
+      .btn {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: opacity 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .btn:hover {
+        opacity: 0.8;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border: 1px solid #667eea;
+        color: #667eea;
+      }
+
+      .btn-secondary:hover {
+        background: rgba(102, 126, 234, 0.1);
+      }
+
+      /* Footer */
+      footer {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #b0b0b0;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+        border-top: 1px solid #2a2a3e;
+      }
+
+      footer p {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+        }
+
+        .page-header h1 {
+          font-size: 2rem;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Logo/Tên Website</div>
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="about.html">Giới Thiệu</a></li>
+          <li><a href="project.html" class="active">Dự Án</a></li>
+          <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-header">
+        <h1>Dự Án Của Chúng Tôi</h1>
+        <p>Khám phá những dự án tiêu biểu mà chúng tôi đã và đang thực hiện</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>Miniapp - labs</h3>
+            <span class="tag">Web Design</span>
+            <span class="tag">Mini-app</span>
+          </div>
+          <p>Luyện tập thiết kế cơ sở dự liệu, mô hình hóa hệ thống bằng UML</p>
+          <div class="card-footer">
+            <a
+              href="https://github.com/game-dev-newbie/Software-Engineering.git"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+              >Xem Chi Tiết</a
+            >
+          </div>
+        </div>
+
+        <!-- <div class="card">
+          <div class="card-header">
+            <h3>Ứng Dụng Di Động</h3>
+            <span class="tag">Mobile App</span>
+            <span class="tag">iOS/Android</span>
+          </div>
+          <p>
+            Phát triển ứng dụng di động đa nền tảng với giao diện người dùng
+            thân thiện và hiệu suất cao, phục vụ hơn 100,000 người dùng.
+          </p>
+          <div class="card-footer">
+            <a href="#" class="btn">Xem Chi Tiết</a>
+            <a href="#" class="btn btn-secondary">Demo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Hệ Thống Quản Lý</h3>
+            <span class="tag">Dashboard</span>
+            <span class="tag">Enterprise</span>
+          </div>
+          <p>
+            Xây dựng hệ thống quản lý doanh nghiệp tổng thể với các module CRM,
+            HRM, và quản lý kho hàng tích hợp.
+          </p>
+          <div class="card-footer">
+            <a href="#" class="btn">Xem Chi Tiết</a>
+            <a href="#" class="btn btn-secondary">Demo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Landing Page Marketing</h3>
+            <span class="tag">Landing Page</span>
+            <span class="tag">SEO</span>
+          </div>
+          <p>
+            Thiết kế landing page chuyển đổi cao với tối ưu SEO và tích hợp các
+            công cụ marketing tự động.
+          </p>
+          <div class="card-footer">
+            <a href="#" class="btn">Xem Chi Tiết</a>
+            <a href="#" class="btn btn-secondary">Demo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Nền Tảng Học Online</h3>
+            <span class="tag">Education</span>
+            <span class="tag">LMS</span>
+          </div>
+          <p>
+            Phát triển hệ thống học tập trực tuyến với tính năng livestream,
+            quản lý khóa học, và theo dõi tiến độ học tập.
+          </p>
+          <div class="card-footer">
+            <a href="#" class="btn">Xem Chi Tiết</a>
+            <a href="#" class="btn btn-secondary">Demo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3>Chatbot AI</h3>
+            <span class="tag">AI/ML</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div> -->
+      </div>
+    </main>
+  </body>
+</html>
