@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Giới thiệu</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f1724; /* dark navy */
+        --card: #0b1220;
+        --muted: #9aa4b2;
+        --accent: #6ee7b7; /* mint */
+        --glass: rgba(255, 255, 255, 0.04);
+        --maxw: 900px;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, var(--bg), #081022);
+        color: #e6eef6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 32px;
+      }
+      .wrap {
+        width: 100%;
+        max-width: var(--maxw);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .avatar {
+        width: 84px;
+        height: 84px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), #4dd0e1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #042028;
+        font-weight: 700;
+        font-size: 26px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 26px;
+      }
+      p.lead {
+        margin: 6px 0 0;
+        color: var(--muted);
+      }
+
+      .card {
+        background: var(--card);
+        padding: 20px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+        backdrop-filter: blur(6px);
+      }
+
+      .hero {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .hero .left {
+        flex: 1;
+      }
+      .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .btn {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 0;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background: linear-gradient(90deg, var(--accent), #3ee0d2);
+        color: #022;
+      }
+      .btn-outline {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .proj {
+        background: var(--glass);
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .proj h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+      .proj p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .proj a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* responsive */
+      @media (max-width: 640px) {
+        header {
+          flex-direction: row;
+        }
+        .hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .avatar {
+          width: 68px;
+          height: 68px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <header>
+          <div>
+            <h1>Sinh viên năm 3, lập trình viên game</h1>
+            <p class="lead">
+              Tôi đang học tập tại Học viện công nghệ bưu chính viễn thông.
+            </p>
+          </div>
+          <div style="margin-left: 16px; text-align: right">
+            <div style="font-size: 12px; color: var(--muted)">Đang tìm:</div>
+            <div style="font-weight: 600">
+              Thực tập, đồng sáng lập, dự án hợp tác
+            </div>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="left">
+            <div class="actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/game-dev-newbie"
+                target="_blank"
+                rel="noopener"
+                style="text-decoration: none;"
+                >Xem GitHub</a
+              >
+              <a class="btn btn-outline" href="mailto:bdat6832@gmail.com" style="text-decoration: none;"
+                >Email: bdat6832@gmail.com</a
+              >
+            </div>
+
+            <div style="margin-top: 16px">
+              <strong>Kỹ năng chính:</strong>
+              <div style="color: var(--muted); margin-top: 6px">
+                C#, Unity, HTML/CSS/JS, Git, Nodejs/Express.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top: 18px">
+          <h2 style="margin: 0 0 10px">Dự án đang làm</h2>
+          <div class="projects">
+            <article class="proj">
+              <h3>Miniapp - Zalo: Đặt bàn nhà hàng</h3>
+              <p>
+
+                Mini app cho phép người dùng zalo đặt bàn và check-in, hủy khi cần
+              </p>
+              <a
+                href="https://github.com/game-dev-newbie/Software-Engineering.git"
+                target="_blank"
+                >Xem repo →</a
+              >
+            </article>
+
+            <!-- <article class="proj">
+              <h3>Prototype Combat</h3>
+              <p>Prototype hệ thống chiến đấu 2D viết bằng Unity (C#).</p>
+              <a
+                href="https://github.com/your-username/proto-combat"
+                target="_blank"
+                >Xem repo →</a
+              >
+            </article>
+
+            <article class="proj">
+              <h3>Landing Page TRUYỀN THÔNG</h3>
+              <p>
+                Trang giới thiệu, HTML/CSS thuần dùng cho demo sản phẩm truyền
+                thông.
+              </p>
+              <a
+                href="https://github.com/your-username/landing-media"
+                target="_blank"
+                >Xem repo →</a
+              >
+            </article> -->
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
